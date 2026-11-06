@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BELLA PIZZA - Cadastro</title>
+    <link rel="stylesheet" href="cadastro.css">
+    <script src="tema.js"></script>
+    <script src="auth.js"></script>
+</head>
+<body>
+    <header>
+        <img class="logo" src="img/Logo_Bella_Pizza_com_Sabor_Italiano_1-removebg-preview.png" alt="">
+        <nav>
+            <a id="btn-inicio" href="index.html">Início</a>
+            <a id="btn-Cardapio" href="cardapio.html">Cardápio</a>
+            <a class="btn-Mais"  id="abrirLista" href="">Mais ▼</a>
+            <ul id="lista">
+    <li><a href="historico.html">Histórico</a></li>
+    <li><a href="carrinho.html">Carrinho</a></li>
+    <li><a href="perfil.html">Perfil</a></li>
+</ul>
+        </nav>
+        <div class="trilho" id="trilho">
+            <input class="indicador" type="checkbox" id="switch">
+        </div> 
+        <div class="botoes">
+            <button onclick="window.location.href='cadastro.html'" id="btn-cadastro" class="btn cadastro">Cadastrar</button>
+            <button onclick="window.location.href='login.html'" id="btn-login" class="btn login">Login</button>
+        </div>
+    </header>
+   <main>
+   
+        <div class="login-acesso">
+            <div><img src="img/Logo Bella Pizza em Branco 1.png" alt=""></div>
+             
+            <h3>Cadastro</h3>
+            <form action="">
+                <h2>CPF:</h2>
+                <input id="cpf" type="text" placeholder="000.000.000-00" oninput=mascara_cpf()  maxlength="14">
+                <h2>CELL</h2>
+                <input id="telefone" type="tel" placeholder="(31)99999-9999" oninput=mascara_telefone() maxlength="14">
+                <h2>Email</h2>
+                <input id="email-cadastro" type="email" placeholder="E-mail">
+                <h2>Senha</h2>
+                <input id="senha-cadastro" type="password" placeholder="Senha">
+                <h2>Nome Completo</h2>
+                <input id="nome-cadastro" type="text" placeholder="Nome Completo">
+                <h2>Endereço</h2>
+                <input id="endereco-cadastro" type="text" placeholder="Endereço">
+                
+                
+            </form>
+            <button id="btn-cadastrar" type="button">Cadastrar</button>
+        </div>
+   </main>
+    <script src="cadastro.js"></script>
+</body>
+</html>
