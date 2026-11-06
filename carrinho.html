@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BELLA PIZZA - Carrinho de Compras</title>
+    <link rel="stylesheet" href="carrinho.css">
+    <script src="tema.js"></script>
+    <script src="auth.js"></script>
+</head>
+<body>
+    <header>
+        <img class="logo" src="img/Logo_Bella_Pizza_com_Sabor_Italiano_1-removebg-preview.png"alt="">
+        <nav>
+            <a id="btn-inicio" href="index.html">Início</a>
+            <a id="btn-Cardapio" href="cardapio.html">Cardápio</a>
+            <a class="btn-Mais" id="abrirLista" href="#">Mais ▼</a>
+            <ul id="lista">
+                <li><a href="historico.html">Histórico</a></li>
+                <li><a href="carrinho.html">Carrinho</a></li>
+                <li><a href="perfil.html">Perfil</a></li>
+            </ul>
+        </nav>
+
+        <div class="trilho" id="trilho">
+            <input class="indicador" type="checkbox" id="switch">
+        </div> 
+
+        <div class="botoes">
+            <button onclick="window.location.href='cadastro.html'" id="btn-cadastro" class="btn cadastro">Cadastrar</button>
+            <button onclick="window.location.href='login.html'" id="btn-login" class="btn login">Login</button>
+        </div>
+    </header>
+
+    <main class="container-carrinho">
+        <section class="banner-carrinho">
+            <div class="titulo-carrinho">
+                <div class="subtitulo-decorado">
+                    <span class="linha"></span>
+                    <span class="texto-sub">CARRINHO DE COMPRAS</span>
+                    <span class="linha red"></span>
+                </div>
+                <h1>Seu carrinho</h1>
+                <p class="descricao-carrinho">
+                    Confira os itens selecionados e finalize seu pedido<br>
+                    para aproveitar o melhor da nossa pizza!
+                </p>
+            </div>
+            
+            <div class="frase-motto">
+                <p>Pizza boa<br>também é<br><span>felicidade!</span></p>
+            </div>
+        </section>
+
+        <section class="tabela-container">
+            <table class="tabela-carrinho">
+                <thead>
+                    <tr>
+                        <th class="col-produto">Produto</th>
+                        <th class="col-preco">Preço</th>
+                        <th class="col-qtd">Quantidade</th>
+                        <th class="col-total">Total</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </section>
+
+        <div class="acao-continuar">
+            <a href="cardapio.html" class="btn-continuar">
+                <span class="seta-voltar">⟵</span> Continuar comprando
+            </a>
+        </div>
+
+        <section class="resumo-pedido">
+            <h2>Resumo do pedido</h2>
+            <div class="linha-resumo">
+                <span>Subtotal (<span id="qtd-total-itens">0</span> itens)</span>
+                <span id="subtotal-valor">R$ 0,00</span>
+            </div>
+            <div class="linha-resumo">
+                <span>Taxa de entrega</span>
+                <span id="taxa-entrega">R$ 0,00</span>
+            </div>
+            <div class="linha-resumo total-destaque">
+                <span>Total</span>
+                <span id="total-geral">R$ 0,00</span>
+            </div>
+            <button class="btn-finalizar">Finalizar pedido</button>
+        </section>
+    </main>
+
+    <footer class="rodape">
+        <div class="rodape-logo">
+            <img src="img/Logo Bella Pizza em Branco 1.png" alt="Bella Pizza">
+        </div>
+
+        <div class="rodape-divisor"></div>
+
+        <div class="rodape-contato">
+            <p>Av. das Pizzas, 123</p>
+            <p>Bairro Saboroso - São Paulo/SP</p>
+            <p>Telefone: (11) 98765-4321</p>
+            <p>E-mail: <a href="mailto:contato@bellapizza.com.br">contato@bellapizza.com.br</a></p>
+        </div>
+    </footer>
+
+    <script src="carrinho.js"></script>
+</body>
+</html>

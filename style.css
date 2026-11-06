@@ -1,0 +1,967 @@
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+body {
+            font-family: Arial, sans-serif;
+        }
+
+
+header{
+    position: sticky;
+    top: 0%;
+    width: 100%;
+    height: 5.19vh;
+    display: flex;
+     align-items: center;
+     justify-content: space-between;
+     padding: 0 12px;
+      background: var(--header);
+      z-index: 1000;
+}
+
+.logo {
+            width: 120px;
+            height: auto;
+            object-fit: contain;
+        }
+
+nav {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+        }
+
+ nav a {
+            text-decoration: none;
+            color: var(--nav-a);
+            font-size: 16px;
+            font-weight: bold;
+            white-space: nowrap;
+        }
+
+.mais {
+            display: flex;
+            align-items: center;
+            gap: 2px;
+     }
+
+       .botoes {
+            display: flex;
+            align-items: center;
+            gap: 7px;
+        }
+
+.btn
+{
+            height: 34px;
+            padding: 0 10px;
+            border-radius: 11px;
+            font-size: 12px;
+            font-weight: bold;
+            cursor: pointer;
+            white-space: nowrap;
+ }
+
+.cadastro 
+{
+            background: white;
+            color: #174a28;
+            border: 1px solid #174a28;
+}
+
+.login 
+{
+            background: #d90000;
+            color: white;
+            border: 1px solid #d90000;
+            padding: 0 16px;
+}
+
+.banner-principal {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    
+    
+    
+}
+
+.banner-principal::before {
+          content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    background: linear-gradient(
+        to right,
+        var(--banner-principal)
+    );
+        }
+
+.banner-principal-image {
+             position: absolute;
+    top: 0;
+    right: 0;
+    width: 58%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+        }
+
+.banner-principal-content {
+           position: absolute;
+          top: 0%;
+          left: 2%;
+    z-index: 2;
+    width: 50%;
+    padding: 40px 32px;
+    color: #174b2a;
+   
+    
+        }
+
+       
+        
+
+.titulo {
+            
+         
+          position: relative;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 60px;
+            margin-left: 24px;
+            font-size: 30px;
+            font-weight: bold;
+            white-space: nowrap;
+          
+        }
+
+        .titulo span{
+            color: var(--titulo);
+        }
+
+.linha {
+            display: inline-block;
+            width: 51px;
+            height: 3px;
+            background: #174b2a;
+        }
+
+.linha.red {
+            background: #d90000;
+        }
+
+.msg{
+    
+            font-size: 80px;
+            line-height: 1.15;
+            font-weight: 700;
+            margin-bottom: 40px;
+            width: 100%;
+            overflow: hidden;
+            white-space: nowrap;
+             animation: mark.5s step-end infinite, write 3s steps(22,end)infinite;
+            
+        }
+ .msg{
+    color: var(--msg);
+ }       
+
+ h1 span {
+            display: block;
+            color: #d90000;
+            font-size: clamp(39px, 5.5vw, 52px);
+            white-space: nowrap;
+        }
+.descricao {
+            font-size: 20px;
+            line-height: 1.5;
+            margin-bottom: 60px;
+            max-width: 390px;
+            color: var(--descricao);
+            
+        }
+
+        
+.menu-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            background: #d90000;
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: bold;
+            padding: 10px 16px 10px 24px;
+            border-radius: 15px;
+            transition: background 0.3s, transform 0.3s;
+        }
+
+.menu-button:hover {
+            background: #ad0000;
+            transform: translateY(-2px);
+        }
+
+  .seta {
+            font-size: 30px;
+            line-height: 20px;
+            font-weight: normal;
+        }
+
+      
+
+
+        .secao-momento {
+            width: calc(100% - 32px);
+            max-width: 1100px;
+            margin: 0 auto;
+            background: #fffbe3;
+        }
+
+        .beneficios {
+            min-height: 178px;
+            padding: 22px 25px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            align-items: center;
+            background: var(--beneficios);
+        }
+
+        .beneficio {
+            min-height: 120px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 10px 20px;
+        }
+
+        .beneficio + .beneficio {
+            border-left: 1px solid #dedbd2;
+        }
+
+        .beneficio h3 {
+            font-size: 20px;
+            line-height: 1.4;
+            margin-bottom: 2px;
+            color: var(--beneficio-h2);
+        }
+
+        .beneficio p {
+            font-size: 16px;
+            line-height: 1.5;
+            color: var(--beneficio-p);
+        }
+
+        .conteudo-momento {
+            min-height: 428px;
+            padding: 48px 80px 45px;
+            
+            align-self: center;
+           
+            gap: 10px;
+            background: var(--conteudo-momento);
+            color: var(--conteudo-momento-p-h2);
+        }
+
+        .texto-momento {
+          
+            max-width: 480px;
+            float: left;
+        }
+
+        .titulo-decorado {
+            
+            margin: 0 0 80px 35px;
+            display: inline-block;
+            transform: rotate(-7deg);
+        }
+
+        .titulo-decorado h2 {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: clamp(34px, 4vw, 43px);
+            line-height: 1.2;
+            font-weight: 900;
+            color: var(--conteudo-momento-p-h2);
+        }
+
+        .titulo-decorado h2 span {
+            display: block;
+            color: #d90000;
+        }
+
+        .titulo-decorado::before,
+        .titulo-decorado::after {
+            content: "";
+            position: absolute;
+            height: 2px;
+            width: 85%;
+            right: 0;
+        }
+
+        .titulo-decorado::before {
+            bottom: -12px;
+            background: #d90000;
+        }
+
+        .titulo-decorado::after {
+            bottom: -24px;
+            background: #174b2a;
+            right: 5%;
+        }
+
+        .texto-momento > p {
+            font-size: 18px;
+            line-height: 1.42;
+            margin-top: 12px;
+        }
+
+        .imagem-momento {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 300px;
+        }
+
+        .imagem-momento img {
+            width: min(100%, 300px);
+            aspect-ratio: 1;
+            border-radius: 50%;
+            object-fit: cover;
+            
+        }
+
+       .rodape {
+        width: 100%;
+        min-height: 219px;
+        background: var(--rodape);
+        display: flex;
+        align-items: center;
+        padding: 24px 4%;
+        color: #fff;
+        gap: 44px;
+    }
+
+    .rodape-logo {
+        width: 34%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .rodape-logo img {
+        width: 100%;
+        max-width: 250px;
+        height: auto;
+        object-fit: contain;
+    }
+
+    .rodape-divisor {
+        width: 2px;
+        height: 162px;
+        background: rgba(255, 255, 255, 0.8);
+        flex-shrink: 0;
+    }
+
+    .rodape-contato {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .rodape-contato p {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 17px;
+        line-height: 1.25;
+        font-weight: 600;
+        margin: 0;
+    }
+
+    .rodape-contato a {
+        color: #fff;
+        text-decoration: underline;
+        text-underline-offset: 2px;
+    }
+    #btn-inicio{
+        transition: 0.5s;
+        
+    }
+
+    #btn-Cardapio{
+        transition: 0.5s;
+        
+    }
+
+    .btn-Mais{
+        transition: 0.5s;
+        
+    }
+
+    #btn-inicio:hover{
+        color: #ad0000;
+        transition: 0.5s;
+         transform: translateY(-2px);
+    }
+
+    #btn-Cardapio:hover{
+        color: #ad0000;
+        transition: 0.5s;
+         transform: translateY(-2px);
+    }
+    
+    .btn-Mais:hover{
+        color: #ad0000;
+        transition: 0.5s;
+         transform: translateY(-2px);
+    }
+
+
+    #btn-cadastro{
+       
+         transition: 0.5s;
+    }
+
+     #btn-login{
+         transition: 0.5s;
+    }
+    #btn-cadastro:hover{
+        background-color: #174b2a;
+        color: white;
+         transition: 0.5s;
+         transform: translateY(-2px);
+
+    }
+
+    #btn-login:hover{
+        background-color: #ad0000;
+        color: white;
+         transition: 0.5s;
+         transform: translateY(-2px);
+
+    }
+
+    @keyframes mark{
+        50%{
+            border-right-color: transparent;
+        }
+    }
+    @keyframes write{
+        0%{
+            width: 0;
+        }
+    }
+
+    #lista {
+        position: absolute;
+        top: 70%;
+        left:41% ;
+        display: none;
+    list-style: none;
+    padding: 10px;
+    background: #ffffff;
+    width: 120px;
+   animation: descer 1s ease;
+   
+}
+
+#lista li {
+    padding: 8px;
+    transition: 0.5s;
+}
+
+#lista a {
+    color: black;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+#lista a:hover {
+    color: #ad0000;
+    text-decoration: none;
+    transform: translateY(-2px);
+    transition: 0.5s;
+}
+
+#lista li:hover {
+   transition: 0.5s;
+    transform: translateY(-2px);
+}
+
+@keyframes descer {
+    from {
+        transform: translateY(-10px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+.trilho {
+    position: relative;
+    left: 22%;
+    width: 55px;
+    height: 28px;
+    background-color: #174b2a;
+    border-radius: 150px;
+    cursor: pointer;
+    transition: background-color .5s;
+}
+
+.trilho .indicador {
+    appearance: none;
+    -webkit-appearance: none;
+    margin: 0;
+    width: 22px;
+    height: 22px;
+    background-color: #fffbe3;
+    border-radius: 50%;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    cursor: pointer;
+    transition: left .5s;
+}
+
+.trilho.dark {
+    background-color: #ff4545;
+}
+
+.trilho.dark .indicador {
+    left: 30px;
+    background-color: #fffbe3;
+}
+
+:root{
+    --header: #fff;
+    --nav-a: #174a28;
+    --rodape: #164b29;
+    --conteudo-momento: #fffbe3;
+    --conteudo-momento-p-h2: #174b2a;
+    --beneficio-h2:#174b2a;
+    --beneficio-p:black;
+    --banner-principal:
+        #fffbe3 0%,
+        #fffbe3 40%,
+        rgba(255, 251, 227, 0.96) 47%,
+        rgba(255, 251, 227, 0.72) 51%,
+        rgba(255, 251, 227, 0.25) 60%,
+        transparent 69%;
+}
+
+.dark-mode:root{
+    --header: #151b16;
+    --nav-a: #fffbe3;
+    --beneficios: #151b16;
+    --rodape:#151b16;
+    --conteudo-momento:#202b22;
+    --conteudo-momento-p-h2:#fffbe3;
+    --beneficio-h2:#fffbe3;
+    --beneficio-p:#fffbe3;
+    --banner-principal:
+        
+        #151b16 45%,
+    #151b16 40%,
+    rgba(21, 27, 22, 0.96) 47%,
+    rgba(21, 27, 22, 0.72) 51%,
+    rgba(21, 27, 22, 0.25) 60%,
+    transparent 69%;
+    --banner-principal-back:#151b16;
+    --titulo:#fffbe3;
+    --msg:#fffbe3;
+    --descricao:#fffbe3;
+}
+
+@media screen and (max-width: 1024px) {
+    header {
+        height: auto;
+        min-height: 65px;
+        flex-wrap: wrap;
+        gap: 12px;
+        padding: 12px 20px;
+    }
+
+    .logo {
+        width: 100px;
+    }
+
+    nav {
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    .btn {
+        height: 32px;
+        padding: 0 8px;
+        font-size: 11px;
+    }
+
+    .login {
+        padding: 0 10px;
+    }
+
+    .banner-principal {
+        min-height: 650px;
+    }
+
+    .banner-principal-content {
+        width: 58%;
+        padding: 35px 24px;
+    }
+
+    .titulo {
+        margin-left: 10px;
+        margin-bottom: 40px;
+        font-size: 25px;
+        white-space: normal;
+        flex-wrap: wrap;
+    }
+
+    .msg {
+        font-size: clamp(38px, 6vw, 60px);
+        white-space: normal;
+        overflow-wrap: anywhere;
+        animation: none;
+    }
+
+    h1 span {
+        font-size: clamp(30px, 4.5vw, 46px);
+        white-space: normal;
+    }
+
+    .descricao {
+        font-size: 18px;
+        margin-bottom: 35px;
+    }
+
+    .menu-button {
+        font-size: 17px;
+    }
+
+    .conteudo-momento {
+        padding: 40px;
+    }
+
+    .titulo-decorado {
+        margin: 0 0 45px 20px;
+    }
+
+    .texto-momento {
+        max-width: 55%;
+    }
+
+    .imagem-momento img {
+        width: min(100%, 260px);
+    }
+
+    .rodape {
+        gap: 25px;
+    }
+
+    .rodape-contato p {
+        font-size: 15px;
+    }
+
+    @media (max-width: 768px) {
+        header {
+            justify-content: center;
+            gap: 14px;
+        }
+
+        .logo {
+            width: 90px;
+        }
+
+        nav {
+            width: 100%;
+            justify-content: center;
+            gap: 14px;
+        }
+
+        .mais,
+        .botoes {
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .banner-principal {
+            min-height: auto;
+            padding-top: 260px;
+        }
+
+        .banner-principal-image {
+            width: 100%;
+            height: 300px;
+            object-position: center;
+        }
+
+        .banner-principal-content {
+            position: relative;
+            top: auto;
+            left: auto;
+            width: 100%;
+            padding: 25px 30px 45px;
+        }
+
+        .titulo {
+            margin: 0 0 30px;
+            gap: 8px;
+            font-size: 22px;
+        }
+
+        .linha {
+            width: 35px;
+        }
+
+        .msg {
+            font-size: clamp(34px, 7vw, 48px);
+            margin-bottom: 25px;
+        }
+
+        h1 span {
+            font-size: clamp(30px, 6vw, 42px);
+        }
+
+        .descricao {
+            max-width: 100%;
+            font-size: 17px;
+            margin-bottom: 30px;
+        }
+
+        .secao-momento {
+            width: calc(100% - 24px);
+        }
+
+        .beneficios {
+            grid-template-columns: 1fr;
+            padding: 15px;
+        }
+
+        .beneficio {
+            min-height: auto;
+            padding: 22px 12px;
+        }
+
+        .beneficio + .beneficio {
+            border-left: none;
+            border-top: 1px solid #dedbd2;
+        }
+
+        .conteudo-momento {
+            padding: 35px 25px;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .texto-momento {
+            max-width: 100%;
+            float: none;
+        }
+
+        .titulo-decorado {
+            margin: 0 0 35px 10px;
+        }
+
+        .titulo-decorado h2 {
+            font-size: clamp(32px, 6vw, 40px);
+        }
+
+        .texto-momento > p {
+            font-size: 17px;
+        }
+
+        .imagem-momento {
+            min-height: auto;
+            width: 100%;
+        }
+
+        .imagem-momento img {
+            width: min(80%, 280px);
+        }
+
+        .rodape {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 22px;
+            padding: 30px 20px;
+        }
+
+        .rodape-logo {
+            width: 100%;
+            justify-content: center;
+        }
+
+        .rodape-logo img {
+            max-width: 200px;
+        }
+
+        .rodape-divisor {
+            width: 80%;
+            height: 1px;
+        }
+
+        .rodape-contato {
+            align-items: center;
+        }
+
+        #lista {
+            left: auto;
+            right: 10px;
+            top: 100%;
+        }
+
+        .trilho {
+            left: auto;
+        }
+
+        @media (max-width: 480px) {
+            header {
+                padding: 12px;
+                gap: 12px;
+            }
+
+            .logo {
+                width: 80px;
+            }
+
+            nav {
+                gap: 10px;
+            }
+
+            nav a {
+                font-size: 12px;
+            }
+
+            .botoes {
+                width: 100%;
+                gap: 8px;
+            }
+
+            .btn {
+                height: 32px;
+                font-size: 11px;
+            }
+
+            .banner-principal {
+                padding-top: 210px;
+            }
+
+            .banner-principal-image {
+                height: 240px;
+            }
+
+            .banner-principal-content {
+                padding: 20px 18px 35px;
+            }
+
+            .titulo {
+                font-size: 18px;
+                gap: 6px;
+                margin-bottom: 25px;
+            }
+
+            .linha {
+                width: 25px;
+                height: 2px;
+            }
+
+            .msg {
+                font-size: 36px;
+                line-height: 1.15;
+                overflow-wrap: anywhere;
+                margin-bottom: 22px;
+            }
+
+            h1 span {
+                font-size: 30px;
+            }
+
+            .descricao {
+                font-size: 16px;
+                line-height: 1.5;
+                margin-bottom: 25px;
+            }
+
+            .menu-button {
+                font-size: 15px;
+                padding: 10px 12px;
+                gap: 8px;
+            }
+
+            .seta {
+                font-size: 24px;
+            }
+
+            .secao-momento {
+                width: calc(100% - 16px);
+            }
+
+            .beneficio h3 {
+                font-size: 18px;
+            }
+
+            .beneficio p {
+                font-size: 14px;
+            }
+
+            .conteudo-momento {
+                padding: 30px 18px;
+            }
+
+            .titulo-decorado {
+                margin-left: 5px;
+                margin-bottom: 30px;
+            }
+
+            .titulo-decorado h2 {
+                font-size: 30px;
+            }
+
+            .texto-momento > p {
+                font-size: 15px;
+            }
+
+            .imagem-momento img {
+                width: min(100%, 230px);
+            }
+
+            .rodape {
+                padding: 25px 15px;
+            }
+
+            .rodape-logo img {
+                max-width: 170px;
+            }
+
+            .rodape-contato p {
+                font-size: 13px;
+                overflow-wrap: anywhere;
+            }
+
+            #lista {
+                width: 120px;
+                z-index: 1001;
+            }
+        }
+    }
+}

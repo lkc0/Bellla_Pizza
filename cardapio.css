@@ -1,0 +1,1471 @@
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+body {
+            font-family: Arial, sans-serif;
+            background-color: var(--main-cardapio);
+        }
+
+
+header{
+    position: sticky;
+    top: 0%;
+    width: 100%;
+    height: 5.19vh;
+    display: flex;
+     align-items: center;
+     justify-content: space-between;
+     padding: 0 12px;
+      background: #fff;
+      z-index: 1000;
+       background: var(--header);
+}
+
+.logo {
+            width: 120px;
+            height: auto;
+            object-fit: contain;
+        }
+
+nav {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            
+        }
+
+ nav a {
+            text-decoration: none;
+            color: #174a28;
+            font-size: 16px;
+            font-weight: bold;
+            white-space: nowrap;
+            color: var(--nav-a);
+        }
+
+.mais {
+            display: flex;
+            align-items: center;
+            gap: 2px;
+     }
+
+       .botoes {
+            display: flex;
+            align-items: center;
+            gap: 7px;
+        }
+
+.btn
+{
+            height: 34px;
+            padding: 0 10px;
+            border-radius: 11px;
+            font-size: 12px;
+            font-weight: bold;
+            cursor: pointer;
+            white-space: nowrap;
+ }
+
+.cadastro 
+{
+            background: white;
+            color: #174a28;
+            border: 1px solid #174a28;
+}
+
+.login 
+{
+            background: #d90000;
+            color: white;
+            border: 1px solid #d90000;
+            padding: 0 16px;
+}
+
+
+#btn-inicio{
+        transition: 0.5s;
+        
+    }
+
+    #btn-Cardapio{
+        transition: 0.5s;
+        
+    }
+
+    .btn-Mais{
+        transition: 0.5s;
+        
+    }
+
+    #btn-inicio:hover{
+        color: #ad0000;
+        transition: 0.5s;
+         transform: translateY(-2px);
+    }
+
+    #btn-Cardapio:hover{
+        color: #ad0000;
+        transition: 0.5s;
+         transform: translateY(-2px);
+    }
+    
+    .btn-Mais:hover{
+        color: #ad0000;
+        transition: 0.5s;
+         transform: translateY(-2px);
+    }
+
+
+    #btn-cadastro{
+       
+         transition: 0.5s;
+    }
+
+     #btn-login{
+         transition: 0.5s;
+    }
+    #btn-cadastro:hover{
+        background-color: #174b2a;
+        color: white;
+         transition: 0.5s;
+         transform: translateY(-2px);
+
+    }
+
+    #btn-login:hover{
+        background-color: #ad0000;
+        color: white;
+         transition: 0.5s;
+         transform: translateY(-2px);
+
+    }
+
+
+    .banner-principal {
+    position: relative;
+    width: 100%;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    border-bottom: #33333391 solid 2px;
+    
+    
+}
+
+.banner-principal::before {
+          content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    background: linear-gradient(
+        to right,
+        var(--banner-principal)
+    );
+        }
+
+.banner-principal-image {
+             position: absolute;
+    top: 0;
+    right: 0;
+    width: 58%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+        }
+
+.banner-principal-content {
+           position: absolute;
+          top: 0%;
+          left: 2%;
+    z-index: 2;
+    width: 50%;
+    padding: 40px 32px;
+    color: #174b2a;
+   
+    
+        }
+
+       
+        
+
+.titulo {
+            
+         
+          position: relative;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 60px;
+            margin-left: 24px;
+            font-size: 30px;
+            font-weight: bold;
+            white-space: nowrap;
+           
+        }
+
+.linha {
+            display: inline-block;
+            width: 51px;
+            height: 3px;
+            background: #174b2a;
+        }
+
+.linha.red {
+            background: #d90000;
+        }
+
+.msg{
+    
+            font-size: 80px;
+            line-height: 1.15;
+            font-weight: 700;
+            margin-bottom: 40px;
+            width: 100%;
+            overflow: hidden;
+            white-space: nowrap;
+             animation: mark.5s step-end infinite, write 3s steps(22,end)infinite;
+            
+        }
+
+ h1 span {
+            display: block;
+            color: #d90000;
+            font-size: clamp(39px, 5.5vw, 52px);
+            white-space: nowrap;
+        }
+.descricao {
+            font-size: 20px;
+            line-height: 1.5;
+            margin-bottom: 60px;
+            max-width: 390px;
+            color: var(--descricao);
+            
+        }
+.menu-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            background: #d90000;
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: bold;
+            padding: 10px 16px 10px 24px;
+            border-radius: 15px;
+            transition: background 0.3s, transform 0.3s;
+        }
+
+.menu-button:hover {
+            background: #ad0000;
+            transform: translateY(-2px);
+        }
+
+  .seta {
+            font-size: 30px;
+            line-height: 20px;
+            font-weight: normal;
+        }
+
+      
+
+
+        .secao-momento {
+            width: calc(100% - 32px);
+            max-width: 1100px;
+            margin: 0 auto;
+            background: #fffbe3;
+        }
+
+        .beneficios {
+            min-height: 178px;
+            padding: 22px 25px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            align-items: center;
+            background: #fff;
+        }
+
+        .beneficio {
+            min-height: 120px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 10px 20px;
+        }
+
+        .beneficio + .beneficio {
+            border-left: 1px solid #dedbd2;
+        }
+
+        .beneficio h3 {
+            font-size: 20px;
+            line-height: 1.4;
+            margin-bottom: 2px;
+            color: #174b2a;
+        }
+
+        .beneficio p {
+            font-size: 16px;
+            line-height: 1.5;
+            
+        }
+
+        .conteudo-momento {
+            min-height: 428px;
+            padding: 48px 80px 45px;
+            
+            align-self: center;
+           
+            gap: 10px;
+            background: #fffbe3;
+            color: #174b2a;
+        }
+
+        .texto-momento {
+          
+            max-width: 480px;
+            float: left;
+        }
+
+        .titulo-decorado {
+            
+            margin: 0 0 80px 35px;
+            display: inline-block;
+            transform: rotate(-7deg);
+        }
+
+        .titulo-decorado h2 {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: clamp(34px, 4vw, 43px);
+            line-height: 1.2;
+            font-weight: 900;
+            color: #174b2a;
+        }
+
+        .titulo-decorado h2 span {
+            display: block;
+            color: #d90000;
+        }
+
+        .titulo-decorado::before,
+        .titulo-decorado::after {
+            content: "";
+            position: absolute;
+            height: 2px;
+            width: 85%;
+            right: 0;
+        }
+
+        .titulo-decorado::before {
+            bottom: -12px;
+            background: #d90000;
+        }
+
+        .titulo-decorado::after {
+            bottom: -24px;
+            background: #174b2a;
+            right: 5%;
+        }
+
+        .texto-momento > p {
+            font-size: 18px;
+            line-height: 1.42;
+            margin-top: 12px;
+        }
+
+        .imagem-momento {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 300px;
+        }
+
+        .imagem-momento img {
+            width: min(100%, 300px);
+            aspect-ratio: 1;
+            border-radius: 50%;
+            object-fit: cover;
+            
+        }
+
+          @keyframes mark{
+        50%{
+            border-right-color: transparent;
+        }
+    }
+    @keyframes write{
+        0%{
+            width: 0;
+        }
+    }
+
+.cardapio{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.1fr 1fr 3fr;
+    width: 100%;
+     min-height: 100vh;
+    padding: 4px 10px 18px;
+}
+
+.categorias{
+    display: flex;
+    justify-content: center;
+     gap: 350px;
+}
+.Todas{
+    display: grid;
+    transition: 0.5s;
+    border:var(--nav-categorias) solid 2px;
+    border-radius: 11px;
+    color: var(--nav-categorias);
+    width: 17%;
+    height: 5vh;
+    align-items: center;
+    justify-content:center ;
+    margin-top: 15px;
+    font-size: 25px;
+     font-weight: bold; 
+      white-space: nowrap;
+     
+}
+
+.especiais{
+   display: grid;
+    transition: 0.5s;
+    border: var(--nav-categorias) solid 2px;
+    border-radius: 11px;
+    color: var(--nav-categorias);
+    width: 17%;
+    height: 5vh;
+    align-items: center;
+    justify-content:center ;
+    margin-top: 15px;
+    font-size: 25px;
+     font-weight: bold; 
+      white-space: nowrap;
+}
+
+.doces{
+    display: grid;
+    transition: 0.5s;
+    border: var(--nav-categorias) solid 2px;
+    border-radius: 11px;
+    color: var(--nav-categorias);
+    width: 17%;
+    height: 5vh;
+    align-items: center;
+    justify-content:center ;
+    margin-top: 15px;
+    font-size: 25px;
+     font-weight: bold; 
+      white-space: nowrap;
+}
+
+.bebidas{
+    display: grid;
+    transition: 0.5s;
+    border: var(--nav-categorias) solid 2px;
+    border-radius: 11px;
+    color: var(--nav-categorias);
+    width: 17%;
+    height: 5vh;
+    align-items: center;
+    justify-content:center ;
+    margin-top: 15px;
+    font-size: 25px;
+     font-weight: bold; 
+      white-space: nowrap;
+}
+
+.Todas:hover{
+    transition: 0.5s;
+   transform: translateY(-2px);;
+   background-color: #174b2a;
+   color: white;
+}
+
+.especiais:hover{
+    transition: 0.5s;
+   transform: translateY(-2px);;
+   background-color: #174b2a;
+     color: white;
+}
+
+.doces:hover{
+    transition: 0.5s;
+   transform: translateY(-2px);;
+   background-color: #174b2a;
+     color: white;
+}
+
+.bebidas:hover{
+    transition: 0.5s;
+   transform: translateY(-2px);;
+   background-color: #174b2a;
+     color: white;
+}
+
+.titulo-cardapio{
+    display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-left: 30px;
+            font-size: 50px;
+            font-weight: bold;
+            white-space: nowrap;
+           align-items: center;
+           color: var(--titulos-descricoes);
+           margin-bottom: 30px;
+}
+
+.barra-pesquisa{
+    position: relative;
+    left: 40%;
+    top: 36%;
+    display: flex;
+     align-items: center;
+     justify-content: center;
+     width: 50%;
+     height: 3.5vh;
+     background-color: #a5a7a5;
+     border-radius: 11px;
+}
+
+
+.barra-pesquisa input{
+   width: 100%;
+    min-width: 0;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 20px;
+    padding-left: 10px;
+    
+}
+.img-pizza-calabreza{
+     width: 400px;
+     
+}
+.pizza-calabreza{
+    justify-self: center;
+  align-self: center;
+    width: 42.5%;
+    height: 53vh;
+    border-radius: 19px;
+   margin-bottom: 30px;
+    border: #a5a7a5 solid 3px;
+}
+.pizza img{
+     display: block;
+    width: calc(100% + 6px);
+    
+    margin: 0 -3px;
+    object-fit: cover;
+    border-radius: 9px;
+}
+.pizza{
+    display: flex;
+    flex-direction: column;
+}
+
+.pizza h3{
+    font-size: 30px;
+    color: var(--titulos-descricoes);
+    margin: 10px 0px 10px  15px;
+}
+
+.pizza p{
+    font-size: 25px;
+    color: var(--titulos-descricoes);
+    margin: 0px 0px 30px  15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.pizza button{
+   width: 90%;
+   height: 6vh;
+   background-color: #174b2a;
+   border-radius: 30px;
+   border: none;
+   cursor: pointer;
+   font-size: 30px;
+   text-align: center;
+    transition: 0.5s;
+   align-self: center;
+   color: var(--button-adicionar);
+    
+}
+
+.pizza button:hover{
+  background-color: #2b8d4f;
+  transition: 0.5s;
+  transform: translateY(-2px);
+    
+}
+
+.img-pizza-Margherita{
+     width: 400px;
+     
+}
+.pizza-Margherita{
+    justify-self: center;
+  align-self: center;
+    width: 42.5%;
+    height: 53vh;
+    border-radius: 19px;
+   margin-bottom: 30px;
+    border: #a5a7a5 solid 3px;
+}
+
+
+.img-pizza-Quatro-Queijos{
+     width: 400px;
+     
+}
+.pizza-Quatro-Queijos{
+    justify-self: center;
+  align-self: center;
+    width: 42.5%;
+    height: 53vh;
+    border-radius: 19px;
+   margin-bottom: 30px;
+    border: #a5a7a5 solid 3px;
+}
+
+.img-pizza-Portuguesa{
+     width: 400px;
+     
+}
+.pizza-Portuguesa{
+    justify-self: center;
+  align-self: center;
+    width: 42.5%;
+    height: 53vh;
+    border-radius: 19px;
+   margin-bottom: 30px;
+    border: #a5a7a5 solid 3px;
+}
+
+
+.img-pizza-Bella-Pizza{
+     width: 400px;
+     
+}
+.pizza-Bella-Pizza{
+    justify-self: center;
+  align-self: center;
+    width: 42.5%;
+    height: 53vh;
+    border-radius: 19px;
+   margin-bottom: 30px;
+    border: #a5a7a5 solid 3px;
+}
+
+.img-pizza-Vegetariana{
+     width: 400px;
+     
+}
+.pizza-Vegetariana{
+    justify-self: center;
+  align-self: center;
+    width: 42.5%;
+    height: 53vh;
+    border-radius: 19px;
+   margin-bottom: 30px;
+    border: #a5a7a5 solid 3px;
+}
+
+.img-pizza-Pepperoni{
+     width: 400px;
+     
+}
+.pizza-Pepperoni{
+    justify-self: center;
+  align-self: center;
+    width: 42.5%;
+    height: 53vh;
+    border-radius: 19px;
+   margin-bottom: 30px;
+    border: #a5a7a5 solid 3px;
+}
+
+.img-pizza-Frango-com-Catupiry{
+     width: 400px;
+     
+}
+.pizza-Frango-com-Catupiry{
+    justify-self: center;
+  align-self: center;
+    width: 42.5%;
+    height: 53vh;
+    border-radius: 19px;
+   margin-bottom: 30px;
+    border: #a5a7a5 solid 3px;
+}
+
+.rodape {
+        width: 100%;
+        min-height: 219px;
+        background: #164b29;
+        display: flex;
+        align-items: center;
+        padding: 24px 4%;
+        color: #fff;
+        gap: 44px;
+         background: var(--rodape);
+    }
+
+    .rodape-logo {
+        width: 34%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .rodape-logo img {
+        width: 100%;
+        max-width: 250px;
+        height: auto;
+        object-fit: contain;
+    }
+
+    .rodape-divisor {
+        width: 2px;
+        height: 162px;
+        background: rgba(255, 255, 255, 0.8);
+        flex-shrink: 0;
+    }
+
+    .rodape-contato {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .rodape-contato p {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 17px;
+        line-height: 1.25;
+        font-weight: 600;
+        margin: 0;
+    }
+
+    .rodape-contato a {
+        color: #fff;
+        text-decoration: underline;
+        text-underline-offset: 2px;
+    }
+
+      #lista {
+        position: absolute;
+        top: 70%;
+        left:41% ;
+        display: none;
+    list-style: none;
+    padding: 10px;
+    background: #ffffff;
+    width: 120px;
+   animation: descer 1s ease;
+   
+}
+
+#lista li {
+    padding: 8px;
+    transition: 0.5s;
+}
+
+#lista a {
+    color: black;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+#lista a:hover {
+    color: #ad0000;
+    text-decoration: none;
+    transform: translateY(-2px);
+    transition: 0.5s;
+}
+
+#lista li:hover {
+   transition: 0.5s;
+    transform: translateY(-2px);
+}
+
+@keyframes descer {
+    from {
+        transform: translateY(-10px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.trilho {
+    position: relative;
+    left: 22%;
+    width: 55px;
+    height: 28px;
+    background-color: #174b2a;
+    border-radius: 150px;
+    cursor: pointer;
+    transition: background-color .5s;
+}
+
+.trilho .indicador {
+    appearance: none;
+    -webkit-appearance: none;
+    margin: 0;
+    width: 22px;
+    height: 22px;
+    background-color: #fffbe3;
+    border-radius: 50%;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    cursor: pointer;
+    transition: left .5s;
+}
+
+.trilho.dark {
+    background-color: #ff4545;
+}
+
+.trilho.dark .indicador {
+    left: 30px;
+    background-color: #fffbe3;
+}
+
+:root{
+    --header: #fff;
+    --nav-a: #174a28;
+    --rodape: #164b29;
+    --conteudo-momento: #fffbe3;
+    --conteudo-momento-p-h2: #174b2a;
+    --beneficio-h2:#174b2a;
+    --beneficio-p:black;
+    --banner-principal:
+        #fffbe3 0%,
+        #fffbe3 40%,
+        rgba(255, 251, 227, 0.96) 47%,
+        rgba(255, 251, 227, 0.72) 51%,
+        rgba(255, 251, 227, 0.25) 60%,
+        transparent 69%;
+        --doces:#174b2a;
+        --titulos-descricoes:#164b29;
+        --button-adicionar:#fffbe3;
+        --nav-categorias:#174b2a;
+}
+
+.dark-mode:root{
+    --header: #151b16;
+    --nav-a: #fffbe3;
+    --beneficios: #151b16;
+    --rodape:#151b16;
+    --conteudo-momento:#202b22;
+    --conteudo-momento-p-h2:#fffbe3;
+    --beneficio-h2:#fffbe3;
+    --beneficio-p:#fffbe3;
+    --banner-principal:
+        
+        #151b16 45%,
+    #151b16 40%,
+    rgba(21, 27, 22, 0.96) 47%,
+    rgba(21, 27, 22, 0.72) 51%,
+    rgba(21, 27, 22, 0.25) 60%,
+    transparent 69%;
+    
+    --titulo:#fffbe3;
+    --msg:#fffbe3;
+    --descricao:#fffbe3;
+    --main-cardapio:#202b22;
+    --nav-categorias:#fffbe3;
+    --titulos-descricoes:#fffbe3;
+    --button-adicionar:#fffbe3;
+}
+
+.titulo span{
+            color: var(--titulo);
+        }
+
+         .msg{
+    color: var(--msg);
+ }  
+
+
+ .img-Petit-Gateau{
+    width: 400px;
+    
+}
+.Petit-Gateau{
+   justify-self: center;
+ align-self: center;
+   width: 42.5%;
+   height: 53vh;
+   border-radius: 19px;
+  margin-bottom: 30px;
+   border: #a5a7a5 solid 3px;
+}
+
+
+@media screen and (max-width: 1024px) {
+    header {
+        height: auto;
+        min-height: 65px;
+        flex-wrap: wrap;
+        gap: 12px;
+        padding: 12px 20px;
+    }
+
+    .logo {
+        width: 100px;
+    }
+
+    nav {
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    .botoes {
+        flex-wrap: wrap;
+    }
+
+    .banner-principal {
+        min-height: 550px;
+    }
+
+    .banner-principal-content {
+        width: 58%;
+        padding: 30px 20px;
+    }
+
+    .titulo {
+        font-size: 25px;
+        margin-left: 10px;
+        white-space: normal;
+        flex-wrap: wrap;
+    }
+
+    .msg {
+        font-size: clamp(38px, 6vw, 60px);
+        white-space: normal;
+        overflow-wrap: anywhere;
+        animation: none;
+    }
+
+    h1 span {
+        font-size: clamp(30px, 4.5vw, 46px);
+        white-space: normal;
+    }
+
+    .descricao {
+        font-size: 18px;
+        margin-bottom: 35px;
+    }
+
+    .cardapio {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-rows: auto;
+        gap: 20px;
+    }
+
+    .categorias {
+        grid-column: 1 / -1;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .Todas,
+    .especiais,
+    .doces,
+    .bebidas {
+        width: auto;
+        min-width: 130px;
+        min-height: 42px;
+        height: auto;
+        padding: 8px 12px;
+        font-size: 18px;
+        white-space: normal;
+    }
+
+    .titulo-cardapio {
+        font-size: 38px;
+        margin-left: 10px;
+        white-space: normal;
+    }
+
+    .barra-pesquisa {
+        left: auto;
+        top: auto;
+        width: 90%;
+        height: 40px;
+        align-self: center;
+    }
+
+    .barra-pesquisa input {
+        font-size: 16px;
+    }
+
+    .pizza-calabreza,
+    .pizza-Margherita,
+    .pizza-Quatro-Queijos,
+    .pizza-Portuguesa,
+    .pizza-Bella-Pizza,
+    .pizza-Vegetariana,
+    .pizza-Pepperoni,
+    .pizza-Frango-com-Catupiry,
+    .Petit-Gateau {
+        width: 90%;
+        height: auto;
+        min-width: 0;
+        align-self: stretch;
+        justify-self: center;
+        overflow: hidden;
+    }
+
+    .img-pizza-calabreza,
+    .img-pizza-Margherita,
+    .img-pizza-Quatro-Queijos,
+    .img-pizza-Portuguesa,
+    .img-pizza-Bella-Pizza,
+    .img-pizza-Vegetariana,
+    .img-pizza-Pepperoni,
+    .img-pizza-Frango-com-Catupiry,
+    .img-Petit-Gateau {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .pizza img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 4 / 3;
+        margin: 0;
+        object-fit: cover;
+    }
+
+    .pizza h3 {
+        font-size: 24px;
+    }
+
+    .pizza p {
+        font-size: 20px;
+    }
+
+    .pizza button {
+        width: 90%;
+        min-height: 45px;
+        height: auto;
+        margin-bottom: 15px;
+        font-size: 22px;
+    }
+
+    .conteudo-momento {
+        padding: 35px;
+    }
+
+    .texto-momento {
+        max-width: 55%;
+    }
+
+    .imagem-momento img {
+        width: min(100%, 260px);
+    }
+
+    .rodape {
+        gap: 25px;
+    }
+
+    .rodape-contato p {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        justify-content: center;
+    }
+
+    nav {
+        width: 100%;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .mais,
+    .botoes {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .banner-principal {
+        min-height: auto;
+        padding-top: 250px;
+    }
+
+    .banner-principal-image {
+        width: 100%;
+        height: 280px;
+    }
+
+    .banner-principal-content {
+        position: relative;
+        top: auto;
+        left: auto;
+        width: 100%;
+        padding: 25px;
+    }
+
+    .titulo {
+        font-size: 22px;
+        margin: 0 0 25px;
+        gap: 8px;
+    }
+
+    .linha {
+        width: 35px;
+    }
+
+    .descricao {
+        max-width: 100%;
+        font-size: 17px;
+    }
+
+    .secao-momento {
+        width: calc(100% - 24px);
+    }
+
+    .beneficios {
+        grid-template-columns: 1fr;
+        padding: 15px;
+    }
+
+    .beneficio {
+        min-height: auto;
+        padding: 20px 12px;
+    }
+
+    .beneficio + .beneficio {
+        border-left: none;
+        border-top: 1px solid #dedbd2;
+    }
+
+    .conteudo-momento {
+        display: flex;
+        flex-direction: column;
+        padding: 30px 22px;
+        gap: 25px;
+    }
+
+    .texto-momento {
+        max-width: 100%;
+        float: none;
+    }
+
+    .titulo-decorado {
+        margin: 0 0 35px 10px;
+    }
+
+    .texto-momento > p {
+        font-size: 17px;
+    }
+
+    .imagem-momento {
+        min-height: auto;
+        width: 100%;
+    }
+
+    .imagem-momento img {
+        width: min(80%, 280px);
+    }
+
+    .cardapio {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 15px 8px;
+        padding: 12px 8px;
+    }
+
+    .categorias {
+        gap: 10px;
+    }
+
+    .Todas,
+    .especiais,
+    .doces,
+    .bebidas {
+        min-width: 0;
+        flex: 1 1 40%;
+        font-size: 16px;
+    }
+
+    .titulo-cardapio {
+        font-size: 30px;
+        margin: 0;
+    }
+
+    .barra-pesquisa {
+        width: 100%;
+    }
+
+    .pizza-calabreza,
+    .pizza-Margherita,
+    .pizza-Quatro-Queijos,
+    .pizza-Portuguesa,
+    .pizza-Bella-Pizza,
+    .pizza-Vegetariana,
+    .pizza-Pepperoni,
+    .pizza-Frango-com-Catupiry,
+    .Petit-Gateau {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .pizza h3 {
+        font-size: 20px;
+        margin: 10px;
+    }
+
+    .pizza p {
+        font-size: 17px;
+        margin: 0 10px 15px;
+    }
+
+    .pizza button {
+        font-size: 17px;
+        min-height: 42px;
+    }
+
+    .rodape {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+        padding: 30px 20px;
+    }
+
+    .rodape-logo {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .rodape-logo img {
+        max-width: 200px;
+    }
+
+    .rodape-divisor {
+        width: 80%;
+        height: 1px;
+    }
+
+    .rodape-contato {
+        align-items: center;
+    }
+
+    #lista {
+        left: auto;
+        right: 10px;
+        top: 100%;
+        z-index: 1001;
+    }
+
+    .trilho {
+        left: auto;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header {
+        padding: 12px;
+        gap: 10px;
+    }
+
+    .logo {
+        width: 80px;
+    }
+
+    nav {
+        gap: 9px;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    .botoes {
+        width: 100%;
+        gap: 8px;
+    }
+
+    .banner-principal {
+        padding-top: 210px;
+    }
+
+    .banner-principal-image {
+        height: 230px;
+    }
+
+    .banner-principal-content {
+        padding: 20px 16px 30px;
+    }
+
+    .titulo {
+        font-size: 18px;
+        margin-bottom: 20px;
+        gap: 6px;
+    }
+
+    .linha {
+        width: 25px;
+        height: 2px;
+    }
+
+    .msg {
+        font-size: 34px;
+        line-height: 1.15;
+        margin-bottom: 20px;
+    }
+
+    h1 span {
+        font-size: 28px;
+    }
+
+    .descricao {
+        font-size: 15px;
+        margin-bottom: 25px;
+    }
+
+    .menu-button {
+        font-size: 15px;
+        padding: 10px 12px;
+        gap: 8px;
+    }
+
+    .secao-momento {
+        width: calc(100% - 16px);
+    }
+
+    .beneficio h3 {
+        font-size: 18px;
+    }
+
+    .beneficio p {
+        font-size: 14px;
+    }
+
+    .conteudo-momento {
+        padding: 25px 16px;
+    }
+
+    .titulo-decorado {
+        margin-left: 5px;
+        margin-bottom: 30px;
+    }
+
+    .titulo-decorado h2 {
+        font-size: 29px;
+    }
+
+    .texto-momento > p {
+        font-size: 15px;
+    }
+
+    .cardapio {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 15px;
+        padding: 12px;
+    }
+
+    .categorias {
+        gap: 8px;
+    }
+
+    .Todas,
+    .especiais,
+    .doces,
+    .bebidas {
+        flex: 1 1 40%;
+        font-size: 14px;
+        min-height: 38px;
+        padding: 6px;
+    }
+
+    .titulo-cardapio {
+        font-size: 28px;
+    }
+
+    .barra-pesquisa {
+        height: 40px;
+    }
+
+    .barra-pesquisa input {
+        font-size: 15px;
+    }
+
+    .pizza-calabreza,
+    .pizza-Margherita,
+    .pizza-Quatro-Queijos,
+    .pizza-Portuguesa,
+    .pizza-Bella-Pizza,
+    .pizza-Vegetariana,
+    .pizza-Pepperoni,
+    .pizza-Frango-com-Catupiry,
+    .Petit-Gateau {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .pizza h3 {
+        font-size: 21px;
+    }
+
+    .pizza p {
+        font-size: 17px;
+    }
+
+    .pizza button {
+        width: 90%;
+        font-size: 18px;
+        min-height: 44px;
+    }
+
+    .rodape {
+        padding: 25px 15px;
+    }
+
+    .rodape-logo img {
+        max-width: 170px;
+    }
+
+    .rodape-contato p {
+        font-size: 13px;
+        overflow-wrap: anywhere;
+    }
+
+    #lista {
+        width: 120px;
+    }
+}
+
+#preco{
+   
+    font-size: 25px;
+    color: var(--titulos-descricoes);
+    margin: 0px 0px 0px  10px;
+}
